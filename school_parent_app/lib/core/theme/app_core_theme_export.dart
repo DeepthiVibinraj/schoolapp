@@ -1,0 +1,10 @@
+export 'package:get/get.dart';
+export 'package:school_parent_app/core/theme/synap/app_decoration.dart';
+export 'package:school_parent_app/core/theme/synap/color_constant.dart';
+export 'package:school_parent_app/core/theme/synap/size_utils.dart';
+export 'package:school_parent_app/core/theme/synap/widgets/custom_button.dart';
+export 'package:school_parent_app/core/theme/synap/widgets/custom_floating_button.dart';
+export 'package:school_parent_app/core/theme/synap/widgets/custom_icon_button.dart';
+export 'package:school_parent_app/core/theme/synap/widgets/custom_image_view.dart';
+export 'package:school_parent_app/core/theme/synap/widgets/custom_search_view.dart';
+export 'package:school_parent_app/core/theme/synap/widgets/custom_text_form_field.dart';

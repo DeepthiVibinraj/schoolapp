@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:school_admin_app/pages/Class/screens/class_add_screen.dart';
 import 'package:school_admin_app/pages/SideMenu/side_menu_drawer.dart';
+import 'package:school_admin_app/utils/app_routes.dart';
 import '../controllers/class_controller.dart';
 
 class ClassListScreen extends StatelessWidget {
@@ -12,6 +13,13 @@ class ClassListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Classes'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Get.toNamed(AppRoutes.admin_dashboard_screen);
+              },
+              icon: Icon(Icons.home))
+        ],
       ),
       drawer: SideMenuDrawer(),
       body: Obx(() {

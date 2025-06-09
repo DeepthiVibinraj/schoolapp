@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:school_admin_app/pages/SideMenu/side_menu_drawer.dart';
 import 'package:school_admin_app/pages/Subjects/screens/subject_add_screen.dart';
+import 'package:school_admin_app/utils/app_routes.dart';
 
 import '../controllers/subject_controller.dart';
 
@@ -12,9 +13,13 @@ class SubjectListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Subjects'),
-      ),
+      appBar: AppBar(title: Text('Subjects'), actions: [
+        IconButton(
+            onPressed: () {
+              Get.toNamed(AppRoutes.admin_dashboard_screen);
+            },
+            icon: Icon(Icons.home))
+      ]),
       drawer: SideMenuDrawer(),
       body: Obx(() {
         if (subjectController.isLoading.value) {

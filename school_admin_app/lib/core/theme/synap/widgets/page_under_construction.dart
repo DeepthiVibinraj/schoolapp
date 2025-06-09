@@ -1,6 +1,9 @@
+import 'package:get/get_core/src/get_main.dart';
+import 'package:school_admin_app/core/theme/app_core_theme_export.dart';
 import 'package:school_admin_app/core/theme/synap/size_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:school_admin_app/pages/SideMenu/side_menu_drawer.dart';
+import 'package:school_admin_app/utils/app_routes.dart';
 
 class PageUnderConstruction extends StatelessWidget {
   const PageUnderConstruction({super.key});
@@ -10,7 +13,13 @@ class PageUnderConstruction extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(actions: [
+        IconButton(
+            onPressed: () {
+              Get.toNamed(AppRoutes.admin_dashboard_screen);
+            },
+            icon: Icon(Icons.home))
+      ]),
       drawer: SideMenuDrawer(),
       body: Column(
         children: [

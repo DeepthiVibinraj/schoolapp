@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:school_admin_app/pages/SideMenu/side_menu_drawer.dart';
 import 'package:school_admin_app/pages/Staff/screens/staff_add_screen.dart';
+import 'package:school_admin_app/utils/app_routes.dart';
 import '../controllers/staff_controller.dart';
 
 class StaffListScreen extends StatelessWidget {
@@ -11,9 +12,13 @@ class StaffListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Staffs'),
-      ),
+      appBar: AppBar(title: Text('Staffs'), actions: [
+        IconButton(
+            onPressed: () {
+              Get.toNamed(AppRoutes.admin_dashboard_screen);
+            },
+            icon: Icon(Icons.home))
+      ]),
       drawer: SideMenuDrawer(),
       body: Obx(() {
         if (staffController.isLoading.value) {

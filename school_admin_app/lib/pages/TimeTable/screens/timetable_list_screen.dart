@@ -14,7 +14,13 @@ class TimeTableListScreen extends StatelessWidget {
     timeTableController.fetchTimeTables();
 
     return Scaffold(
-      appBar: AppBar(title: Text('TimeTable List')),
+      appBar: AppBar(title: Text('TimeTable List'), actions: [
+        IconButton(
+            onPressed: () {
+              Get.toNamed(AppRoutes.admin_dashboard_screen);
+            },
+            icon: Icon(Icons.home))
+      ]),
       drawer: SideMenuDrawer(),
       body: Obx(() {
         if (timeTableController.isLoading.value) {

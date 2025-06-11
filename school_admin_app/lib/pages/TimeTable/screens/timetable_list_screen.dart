@@ -11,6 +11,7 @@ class TimeTableListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     timeTableController.fetchTimeTables();
 
     return Scaffold(
@@ -44,7 +45,7 @@ class TimeTableListScreen extends StatelessWidget {
                     },
                   ),
                   IconButton(
-                    icon: Icon(Icons.delete),
+                    icon: Icon(Icons.delete, color: colorScheme.error),
                     onPressed: () {
                       timeTableController.deleteTimeTable(timetable.id);
                     },
@@ -55,9 +56,12 @@ class TimeTableListScreen extends StatelessWidget {
           },
         );
       }),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Get.toNamed(AppRoutes.timetable_add_screen);
-      }),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Get.toNamed(AppRoutes.timetable_add_screen);
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }

@@ -44,7 +44,7 @@ class AdminDashboardScreen extends StatelessWidget {
                       Icons.school,
                       Colors.blue),
                   _buildStatCard(
-                      "Teachers",
+                      "Staffs",
                       staffController.staffs.length.toString(),
                       Icons.person,
                       Colors.green),
@@ -76,7 +76,7 @@ class AdminDashboardScreen extends StatelessWidget {
                           }),
                       _buildQuickAccessButton(
                           icon: ImageConstant.staff,
-                          label: 'Teachers',
+                          label: 'Staffs',
                           color: colorScheme.primary,
                           function: () {
                             Get.toNamed(AppRoutes.staff_list_screen);

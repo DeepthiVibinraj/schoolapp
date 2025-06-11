@@ -18,10 +18,6 @@ class UserAuthenticationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Obx(() => Text(isLogin.value ? "Login" : "Signup")),
-      //   centerTitle: true,
-      // ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Obx(

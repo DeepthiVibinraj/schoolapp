@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:school_parent_app/core/constants/constants.dart';
 import 'package:school_parent_app/pages/SideMenu/side_menu_drawer.dart';
 import 'package:school_parent_app/pages/TimeTable/controllers/timetable_controller.dart';
+import 'package:school_parent_app/utils/app_routes.dart';
 
 class TimetableScreen extends StatelessWidget {
   @override
@@ -15,6 +16,14 @@ class TimetableScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Timetable'),
         backgroundColor: colorScheme.primary,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () {
+              Get.toNamed(AppRoutes.parent_dashboard_screen);
+            },
+          )
+        ],
       ),
       drawer: SideMenuDrawer(),
       body: Column(

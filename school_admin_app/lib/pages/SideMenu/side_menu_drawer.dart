@@ -87,10 +87,6 @@ class _SideMenuDrawerState extends State<SideMenuDrawer> {
                     icon: Icons.dashboard,
                     press: () {
                       Get.toNamed(AppRoutes.admin_dashboard_screen);
-                      // Navigator.of(context).push(MaterialPageRoute(
-                      //   builder: (context) => PageUnderConstruction(),
-                      // ));
-                      //Get.offAllNamed(AppRoutes.staffScreen);
                     },
                   ),
                   Divider(indent: defaultPadding, endIndent: defaultPadding),
@@ -108,7 +104,6 @@ class _SideMenuDrawerState extends State<SideMenuDrawer> {
                     icon: Icons.person,
                     press: () {
                       Get.toNamed(AppRoutes.staff_list_screen);
-                      //Get.offAllNamed(AppRoutes.staffScreen);
                     },
                   ),
                   Divider(indent: defaultPadding, endIndent: defaultPadding),
@@ -117,7 +112,6 @@ class _SideMenuDrawerState extends State<SideMenuDrawer> {
                     icon: Icons.class_,
                     press: () {
                       Get.toNamed(AppRoutes.class_list_screen);
-                      //Get.offAllNamed(AppRoutes.staffScreen);
                     },
                   ),
                   Divider(indent: defaultPadding, endIndent: defaultPadding),
@@ -126,7 +120,6 @@ class _SideMenuDrawerState extends State<SideMenuDrawer> {
                     icon: Icons.calendar_month,
                     press: () {
                       Get.toNamed(AppRoutes.subject_list_screen);
-                      //Get.offAllNamed(AppRoutes.staffScreen);
                     },
                   ),
                   Divider(indent: defaultPadding, endIndent: defaultPadding),
@@ -145,7 +138,6 @@ class _SideMenuDrawerState extends State<SideMenuDrawer> {
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => PageUnderConstruction(),
                       ));
-                      //Get.offAllNamed(AppRoutes.staffScreen);
                     },
                   ),
                   Divider(indent: defaultPadding, endIndent: defaultPadding),
@@ -156,14 +148,12 @@ class _SideMenuDrawerState extends State<SideMenuDrawer> {
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => PageUnderConstruction(),
                       ));
-                      //Get.offAllNamed(AppRoutes.staffScreen);
                     },
                   ),
                 ],
               ),
             ),
           ),
-          // const Spacer(),
           Column(
             children: [
               Divider(indent: defaultPadding, endIndent: defaultPadding),
@@ -188,7 +178,6 @@ class _SideMenuDrawerState extends State<SideMenuDrawer> {
                                       MaterialPageRoute(
                                           builder: (context) =>
                                               UserAuthenticationScreen())));
-                              //FirebaseAuth.instance.signOut();
                             },
                             icon: Icon(
                               Icons.logout,
@@ -250,7 +239,6 @@ class _SideMenuDrawerState extends State<SideMenuDrawer> {
 class DrawerListTile extends StatelessWidget {
   const DrawerListTile({
     Key? key,
-    // For selecting those three line once press "Command+D"
     required this.title,
     required this.icon,
     required this.press,
@@ -266,16 +254,10 @@ class DrawerListTile extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     return ListTile(
       onTap: press,
-      //horizontalTitleGap: 0.0,
       leading: Icon(
         icon,
         color: colorScheme.secondary,
       ),
-      // SvgPicture.asset(
-      //   svgSrc,
-      //   colorFilter: ColorFilter.mode(Colors.white54, BlendMode.srcIn),
-      //   height: 16,
-      // ),
       title: Text(
         title,
         style: textTheme.bodyLarge?.copyWith(color: Colors.black54),

@@ -10,4 +10,5 @@ Parent App: - Enabled parents to view their child's profile and switch between m
 
 ![Parent Home](./screenshots/parent_dashboard_image.jpg)
 
-This project was developed as part of my Flutter, GraphQL, and Firebase learning.
+This project is in development.
+It forms part of my Flutter, Firebase, and GraphQL learning.
